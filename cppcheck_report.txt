@@ -1,0 +1,1103 @@
+lfs.c:0:0: information: Too many #ifdef configurations - cppcheck only checks 12 of 19 configurations. Use --force to check all configurations. [toomanyconfigs]
+
+^
+lfs.c:3850:9: error: Address of local auto-variable assigned to a function parameter. [autoVariables]
+        lfs->mlist = &dir;
+        ^
+lfs.c:3962:9: error: Address of local auto-variable assigned to a function parameter. [autoVariables]
+        lfs->mlist = &prevdir;
+        ^
+lfs_util.h:181:27: error: The address of local variable 'a' is accessed at non-zero index. [objectIndex]
+           (((uint8_t*)&a)[1] <<  8) |
+                          ^
+lfs_util.h:181:24: note: Address of variable taken here.
+           (((uint8_t*)&a)[1] <<  8) |
+                       ^
+lfs_util.h:181:27: note: The address of local variable 'a' is accessed at non-zero index.
+           (((uint8_t*)&a)[1] <<  8) |
+                          ^
+lfs_util.h:182:27: error: The address of local variable 'a' is accessed at non-zero index. [objectIndex]
+           (((uint8_t*)&a)[2] << 16) |
+                          ^
+lfs_util.h:182:24: note: Address of variable taken here.
+           (((uint8_t*)&a)[2] << 16) |
+                       ^
+lfs_util.h:182:27: note: The address of local variable 'a' is accessed at non-zero index.
+           (((uint8_t*)&a)[2] << 16) |
+                          ^
+lfs_util.h:183:27: error: The address of local variable 'a' is accessed at non-zero index. [objectIndex]
+           (((uint8_t*)&a)[3] << 24);
+                          ^
+lfs_util.h:183:24: note: Address of variable taken here.
+           (((uint8_t*)&a)[3] << 24);
+                       ^
+lfs_util.h:183:27: note: The address of local variable 'a' is accessed at non-zero index.
+           (((uint8_t*)&a)[3] << 24);
+                          ^
+lfs_util.h:204:27: error: The address of local variable 'a' is accessed at non-zero index. [objectIndex]
+           (((uint8_t*)&a)[1] << 16) |
+                          ^
+lfs_util.h:204:24: note: Address of variable taken here.
+           (((uint8_t*)&a)[1] << 16) |
+                       ^
+lfs_util.h:204:27: note: The address of local variable 'a' is accessed at non-zero index.
+           (((uint8_t*)&a)[1] << 16) |
+                          ^
+lfs_util.h:205:27: error: The address of local variable 'a' is accessed at non-zero index. [objectIndex]
+           (((uint8_t*)&a)[2] <<  8) |
+                          ^
+lfs_util.h:205:24: note: Address of variable taken here.
+           (((uint8_t*)&a)[2] <<  8) |
+                       ^
+lfs_util.h:205:27: note: The address of local variable 'a' is accessed at non-zero index.
+           (((uint8_t*)&a)[2] <<  8) |
+                          ^
+lfs_util.h:206:27: error: The address of local variable 'a' is accessed at non-zero index. [objectIndex]
+           (((uint8_t*)&a)[3] <<  0);
+                          ^
+lfs_util.h:206:24: note: Address of variable taken here.
+           (((uint8_t*)&a)[3] <<  0);
+                       ^
+lfs_util.h:206:27: note: The address of local variable 'a' is accessed at non-zero index.
+           (((uint8_t*)&a)[3] <<  0);
+                          ^
+lfs.c:393:23: warning: The address of local variable 'delta' might be accessed at non-zero index. [objectIndex]
+        ((uint32_t*)a)[i] ^= ((const uint32_t*)b)[i];
+                      ^
+lfs.c:1984:32: note: Address of variable taken here.
+                lfs_gstate_xor(&delta, &lfs->gdisk);
+                               ^
+lfs.c:1984:32: note: Calling function 'lfs_gstate_xor', 1st argument '&delta' value is lifetime=delta
+                lfs_gstate_xor(&delta, &lfs->gdisk);
+                               ^
+lfs.c:393:23: note: The address of local variable 'delta' might be accessed at non-zero index.
+        ((uint32_t*)a)[i] ^= ((const uint32_t*)b)[i];
+                      ^
+lfs.c:393:23: warning: The address of local variable 'delta' might be accessed at non-zero index. [objectIndex]
+        ((uint32_t*)a)[i] ^= ((const uint32_t*)b)[i];
+                      ^
+lfs.c:1985:32: note: Address of variable taken here.
+                lfs_gstate_xor(&delta, &lfs->gstate);
+                               ^
+lfs.c:1985:32: note: Calling function 'lfs_gstate_xor', 1st argument '&delta' value is lifetime=delta
+                lfs_gstate_xor(&delta, &lfs->gstate);
+                               ^
+lfs.c:393:23: note: The address of local variable 'delta' might be accessed at non-zero index.
+        ((uint32_t*)a)[i] ^= ((const uint32_t*)b)[i];
+                      ^
+lfs.c:393:23: warning: The address of local variable 'delta' might be accessed at non-zero index. [objectIndex]
+        ((uint32_t*)a)[i] ^= ((const uint32_t*)b)[i];
+                      ^
+lfs.c:1987:28: note: Address of variable taken here.
+            lfs_gstate_xor(&delta, &lfs->gdelta);
+                           ^
+lfs.c:1987:28: note: Calling function 'lfs_gstate_xor', 1st argument '&delta' value is lifetime=delta
+            lfs_gstate_xor(&delta, &lfs->gdelta);
+                           ^
+lfs.c:393:23: note: The address of local variable 'delta' might be accessed at non-zero index.
+        ((uint32_t*)a)[i] ^= ((const uint32_t*)b)[i];
+                      ^
+lfs.c:393:23: warning: The address of local variable 'delta' might be accessed at non-zero index. [objectIndex]
+        ((uint32_t*)a)[i] ^= ((const uint32_t*)b)[i];
+                      ^
+lfs.c:2233:24: note: Address of variable taken here.
+        lfs_gstate_xor(&delta, &lfs->gstate);
+                       ^
+lfs.c:2233:24: note: Calling function 'lfs_gstate_xor', 1st argument '&delta' value is lifetime=delta
+        lfs_gstate_xor(&delta, &lfs->gstate);
+                       ^
+lfs.c:393:23: note: The address of local variable 'delta' might be accessed at non-zero index.
+        ((uint32_t*)a)[i] ^= ((const uint32_t*)b)[i];
+                      ^
+lfs.c:393:23: warning: The address of local variable 'delta' might be accessed at non-zero index. [objectIndex]
+        ((uint32_t*)a)[i] ^= ((const uint32_t*)b)[i];
+                      ^
+lfs.c:2234:24: note: Address of variable taken here.
+        lfs_gstate_xor(&delta, &lfs->gdisk);
+                       ^
+lfs.c:2234:24: note: Calling function 'lfs_gstate_xor', 1st argument '&delta' value is lifetime=delta
+        lfs_gstate_xor(&delta, &lfs->gdisk);
+                       ^
+lfs.c:393:23: note: The address of local variable 'delta' might be accessed at non-zero index.
+        ((uint32_t*)a)[i] ^= ((const uint32_t*)b)[i];
+                      ^
+lfs.c:393:23: warning: The address of local variable 'delta' might be accessed at non-zero index. [objectIndex]
+        ((uint32_t*)a)[i] ^= ((const uint32_t*)b)[i];
+                      ^
+lfs.c:2235:24: note: Address of variable taken here.
+        lfs_gstate_xor(&delta, &lfs->gdelta);
+                       ^
+lfs.c:2235:24: note: Calling function 'lfs_gstate_xor', 1st argument '&delta' value is lifetime=delta
+        lfs_gstate_xor(&delta, &lfs->gdelta);
+                       ^
+lfs.c:393:23: note: The address of local variable 'delta' might be accessed at non-zero index.
+        ((uint32_t*)a)[i] ^= ((const uint32_t*)b)[i];
+                      ^
+lfs.c:393:23: warning: The address of local variable 'delta' might be accessed at non-zero index. [objectIndex]
+        ((uint32_t*)a)[i] ^= ((const uint32_t*)b)[i];
+                      ^
+lfs.c:4991:20: note: Address of variable taken here.
+    lfs_gstate_xor(&delta, &lfs->gdisk);
+                   ^
+lfs.c:4991:20: note: Calling function 'lfs_gstate_xor', 1st argument '&delta' value is lifetime=delta
+    lfs_gstate_xor(&delta, &lfs->gdisk);
+                   ^
+lfs.c:393:23: note: The address of local variable 'delta' might be accessed at non-zero index.
+        ((uint32_t*)a)[i] ^= ((const uint32_t*)b)[i];
+                      ^
+lfs.c:393:23: warning: The address of local variable 'delta' might be accessed at non-zero index. [objectIndex]
+        ((uint32_t*)a)[i] ^= ((const uint32_t*)b)[i];
+                      ^
+lfs.c:4992:20: note: Address of variable taken here.
+    lfs_gstate_xor(&delta, &lfs->gstate);
+                   ^
+lfs.c:4992:20: note: Calling function 'lfs_gstate_xor', 1st argument '&delta' value is lifetime=delta
+    lfs_gstate_xor(&delta, &lfs->gstate);
+                   ^
+lfs.c:393:23: note: The address of local variable 'delta' might be accessed at non-zero index.
+        ((uint32_t*)a)[i] ^= ((const uint32_t*)b)[i];
+                      ^
+lfs.c:393:50: warning: The address of local variable 'temp' might be accessed at non-zero index. [objectIndex]
+        ((uint32_t*)a)[i] ^= ((const uint32_t*)b)[i];
+                                                 ^
+lfs.c:1358:32: note: Address of variable taken here.
+        lfs_gstate_xor(gstate, &temp);
+                               ^
+lfs.c:1358:32: note: Calling function 'lfs_gstate_xor', 2nd argument '&temp' value is lifetime=temp
+        lfs_gstate_xor(gstate, &temp);
+                               ^
+lfs.c:393:50: note: The address of local variable 'temp' might be accessed at non-zero index.
+        ((uint32_t*)a)[i] ^= ((const uint32_t*)b)[i];
+                                                 ^
+lfs.c:399:27: warning: The address of local variable 'delta' might be accessed at non-zero index. [objectIndex]
+        if (((uint32_t*)a)[i] != 0) {
+                          ^
+lfs.c:1995:36: note: Address of variable taken here.
+            if (!lfs_gstate_iszero(&delta)) {
+                                   ^
+lfs.c:1995:36: note: Calling function 'lfs_gstate_iszero', 1st argument '&delta' value is lifetime=delta
+            if (!lfs_gstate_iszero(&delta)) {
+                                   ^
+lfs.c:399:27: note: The address of local variable 'delta' might be accessed at non-zero index.
+        if (((uint32_t*)a)[i] != 0) {
+                          ^
+lfs.c:399:27: warning: The address of local variable 'delta' might be accessed at non-zero index. [objectIndex]
+        if (((uint32_t*)a)[i] != 0) {
+                          ^
+lfs.c:2237:32: note: Address of variable taken here.
+        if (!lfs_gstate_iszero(&delta)) {
+                               ^
+lfs.c:2237:32: note: Calling function 'lfs_gstate_iszero', 1st argument '&delta' value is lifetime=delta
+        if (!lfs_gstate_iszero(&delta)) {
+                               ^
+lfs.c:399:27: note: The address of local variable 'delta' might be accessed at non-zero index.
+        if (((uint32_t*)a)[i] != 0) {
+                          ^
+lfs.c:399:27: warning: The address of local variable 'delta' might be accessed at non-zero index. [objectIndex]
+        if (((uint32_t*)a)[i] != 0) {
+                          ^
+lfs.c:4993:28: note: Address of variable taken here.
+    if (!lfs_gstate_iszero(&delta)) {
+                           ^
+lfs.c:4993:28: note: Calling function 'lfs_gstate_iszero', 1st argument '&delta' value is lifetime=delta
+    if (!lfs_gstate_iszero(&delta)) {
+                           ^
+lfs.c:399:27: note: The address of local variable 'delta' might be accessed at non-zero index.
+        if (((uint32_t*)a)[i] != 0) {
+                          ^
+lfs.c:147:24: style: Condition 'res<0' is always false [knownConditionTrueFalse]
+            return res < 0 ? LFS_CMP_LT : LFS_CMP_GT;
+                       ^
+lfs.c:146:13: note: Assuming condition 'res' is true
+        if (res) {
+            ^
+lfs.c:147:24: note: Condition 'res<0' is always false
+            return res < 0 ? LFS_CMP_LT : LFS_CMP_GT;
+                       ^
+lfs.c:3417:11: style: Redundant initialization for 'nsize'. The initialized value is overwritten before it is read. [redundantInitialization]
+    nsize = size;
+          ^
+lfs.c:3409:22: note: nsize is initialized
+    lfs_size_t nsize = size;
+                     ^
+lfs.c:3417:11: note: nsize is overwritten
+    nsize = size;
+          ^
+lfs_util.h:147:24: style: Opposite expression on both sides of '&'. [oppositeExpression]
+    return lfs_npw2((a & -a) + 1) - 1;
+                       ^
+lfs.c:4626:27: style:inconclusive: Function 'lfs_fs_pred' argument 2 names different: declaration 'dir' definition 'pair'. [funcArgNamesDifferent]
+        const lfs_block_t pair[2], lfs_mdir_t *pdir) {
+                          ^
+lfs.c:563:54: note: Function 'lfs_fs_pred' argument 2 names different: declaration 'dir' definition 'pair'.
+static int lfs_fs_pred(lfs_t *lfs, const lfs_block_t dir[2],
+                                                     ^
+lfs.c:4626:27: note: Function 'lfs_fs_pred' argument 2 names different: declaration 'dir' definition 'pair'.
+        const lfs_block_t pair[2], lfs_mdir_t *pdir) {
+                          ^
+lfs.c:4690:63: style:inconclusive: Function 'lfs_fs_parent' argument 2 names different: declaration 'dir' definition 'pair'. [funcArgNamesDifferent]
+static lfs_stag_t lfs_fs_parent(lfs_t *lfs, const lfs_block_t pair[2],
+                                                              ^
+lfs.c:565:63: note: Function 'lfs_fs_parent' argument 2 names different: declaration 'dir' definition 'pair'.
+static lfs_stag_t lfs_fs_parent(lfs_t *lfs, const lfs_block_t dir[2],
+                                                              ^
+lfs.c:4690:63: note: Function 'lfs_fs_parent' argument 2 names different: declaration 'dir' definition 'pair'.
+static lfs_stag_t lfs_fs_parent(lfs_t *lfs, const lfs_block_t pair[2],
+                                                              ^
+lfs.c:5691:53: style:inconclusive: Function 'lfs_format' argument 2 names different: declaration 'config' definition 'cfg'. [funcArgNamesDifferent]
+int lfs_format(lfs_t *lfs, const struct lfs_config *cfg) {
+                                                    ^
+lfs.h:456:53: note: Function 'lfs_format' argument 2 names different: declaration 'config' definition 'cfg'.
+int lfs_format(lfs_t *lfs, const struct lfs_config *config);
+                                                    ^
+lfs.c:5691:53: note: Function 'lfs_format' argument 2 names different: declaration 'config' definition 'cfg'.
+int lfs_format(lfs_t *lfs, const struct lfs_config *cfg) {
+                                                    ^
+lfs.c:5721:52: style:inconclusive: Function 'lfs_mount' argument 2 names different: declaration 'config' definition 'cfg'. [funcArgNamesDifferent]
+int lfs_mount(lfs_t *lfs, const struct lfs_config *cfg) {
+                                                   ^
+lfs.h:467:52: note: Function 'lfs_mount' argument 2 names different: declaration 'config' definition 'cfg'.
+int lfs_mount(lfs_t *lfs, const struct lfs_config *config);
+                                                   ^
+lfs.c:5721:52: note: Function 'lfs_mount' argument 2 names different: declaration 'config' definition 'cfg'.
+int lfs_mount(lfs_t *lfs, const struct lfs_config *cfg) {
+                                                   ^
+lfs.c:5880:39: style:inconclusive: Function 'lfs_file_opencfg' argument 5 names different: declaration 'config' definition 'cfg'. [funcArgNamesDifferent]
+        const struct lfs_file_config *cfg) {
+                                      ^
+lfs.h:566:39: note: Function 'lfs_file_opencfg' argument 5 names different: declaration 'config' definition 'cfg'.
+        const struct lfs_file_config *config);
+                                      ^
+lfs.c:5880:39: note: Function 'lfs_file_opencfg' argument 5 names different: declaration 'config' definition 'cfg'.
+        const struct lfs_file_config *cfg) {
+                                      ^
+lfs.c:1708:17: style: Local variable 'err' shadows outer variable [shadowVariable]
+            int err = lfs_bd_sync(lfs, &lfs->pcache, &lfs->rcache, false);
+                ^
+lfs.c:1685:13: note: Shadowed declaration
+        int err = lfs_bd_prog(lfs,
+            ^
+lfs.c:1708:17: note: Shadow variable
+            int err = lfs_bd_sync(lfs, &lfs->pcache, &lfs->rcache, false);
+                ^
+lfs.c:1055:16: error: Uninitialized variable: res [uninitvar]
+        return res;
+               ^
+lfs.c:4098:13: style: Variable 'err' is assigned a value that is never used. [unreadVariable]
+    int err = 0;
+            ^
+lfs_util.c:0:0: information: Too many #ifdef configurations - cppcheck only checks 12 of 15 configurations. Use --force to check all configurations. [toomanyconfigs]
+
+^
+runners/bench_runner.c:50:15: warning: The address of local variable 'values' might be accessed at non-zero index. [objectIndex]
+    return &p_[(count_-1)*size];
+              ^
+runners/bench_runner.c:1042:25: note: Address of variable taken here.
+                (void**)&defines->defines[i].values,
+                        ^
+runners/bench_runner.c:1042:17: note: Calling function 'mappend', 1st argument '(void**)&defines->defines[i].values' value is lifetime=values
+                (void**)&defines->defines[i].values,
+                ^
+runners/bench_runner.c:38:16: note: Assuming condition is false
+    if (count_ > capacity_) {
+               ^
+runners/bench_runner.c:50:15: note: The address of local variable 'values' might be accessed at non-zero index.
+    return &p_[(count_-1)*size];
+              ^
+runners/bench_runner.c:50:15: warning: The address of local variable 'bench_overrides' might be accessed at non-zero index. [objectIndex]
+    return &p_[(count_-1)*size];
+              ^
+runners/bench_runner.c:1576:33: note: Address of variable taken here.
+                        (void**)&bench_overrides,
+                                ^
+runners/bench_runner.c:1576:25: note: Calling function 'mappend', 1st argument '(void**)&bench_overrides' value is lifetime=bench_overrides
+                        (void**)&bench_overrides,
+                        ^
+runners/bench_runner.c:38:16: note: Assuming condition is false
+    if (count_ > capacity_) {
+               ^
+runners/bench_runner.c:50:15: note: The address of local variable 'bench_overrides' might be accessed at non-zero index.
+    return &p_[(count_-1)*size];
+              ^
+runners/bench_runner.c:50:15: warning: The address of local variable 'bench_geometries' might be accessed at non-zero index. [objectIndex]
+    return &p_[(count_-1)*size];
+              ^
+runners/bench_runner.c:1713:37: note: Address of variable taken here.
+                            (void**)&bench_geometries,
+                                    ^
+runners/bench_runner.c:1713:29: note: Calling function 'mappend', 1st argument '(void**)&bench_geometries' value is lifetime=bench_geometries
+                            (void**)&bench_geometries,
+                            ^
+runners/bench_runner.c:38:16: note: Assuming condition is false
+    if (count_ > capacity_) {
+               ^
+runners/bench_runner.c:50:15: note: The address of local variable 'bench_geometries' might be accessed at non-zero index.
+    return &p_[(count_-1)*size];
+              ^
+runners/bench_runner.c:50:15: warning: The address of local variable 'bench_ids' might be accessed at non-zero index. [objectIndex]
+    return &p_[(count_-1)*size];
+              ^
+runners/bench_runner.c:2021:25: note: Address of variable taken here.
+                (void**)&bench_ids,
+                        ^
+runners/bench_runner.c:2021:17: note: Calling function 'mappend', 1st argument '(void**)&bench_ids' value is lifetime=bench_ids
+                (void**)&bench_ids,
+                ^
+runners/bench_runner.c:38:16: note: Assuming condition is false
+    if (count_ > capacity_) {
+               ^
+runners/bench_runner.c:50:15: note: The address of local variable 'bench_ids' might be accessed at non-zero index.
+    return &p_[(count_-1)*size];
+              ^
+runners/bench_runner.c:256:5: portability: %zd in format string (no. 2) requires 'ssize_t' but the argument type is 'size_t {aka unsigned long}'. [invalidPrintfArgType_sint]
+    fprintf(stderr, "error: undefined define %s (%zd)\n",
+    ^
+runners/bench_runner.c:305:9: error: Common realloc mistake: 'bench_define_cache' nulled but not freed upon failure [memleakOnRealloc]
+        bench_define_cache = realloc(bench_define_cache, ncount*sizeof(intmax_t));
+        ^
+runners/bench_runner.c:306:9: error: Common realloc mistake: 'bench_define_cache_mask' nulled but not freed upon failure [memleakOnRealloc]
+        bench_define_cache_mask = realloc(bench_define_cache_mask,
+        ^
+runners/bench_runner.c:340:13: error: Common realloc mistake: 'bench_override_defines' nulled but not freed upon failure [memleakOnRealloc]
+            bench_override_defines = realloc(
+            ^
+runners/bench_runner.c:2009:21: error: Common realloc mistake: 'defines' nulled but not freed upon failure [memleakOnRealloc]
+                    defines = realloc(defines,
+                    ^
+runners/bench_runner.c:255:5: style:inconclusive: Statements following return, break, continue, goto or throw will never be executed. [unreachableCode]
+    const char *name = bench_define_name(define);
+    ^
+runners/bench_runner.c:960:21: style:inconclusive: Statements following return, break, continue, goto or throw will never be executed. [unreachableCode]
+                    cases += 1;
+                    ^
+runners/bench_runner.c:1205:35: style: Local variable 'builtin_geometries' shadows outer variable [shadowVariable]
+    extern const bench_geometry_t builtin_geometries[];
+                                  ^
+runners/bench_runner.c:1103:31: note: Shadowed declaration
+extern const bench_geometry_t builtin_geometries[];
+                              ^
+runners/bench_runner.c:1205:35: note: Shadow variable
+    extern const bench_geometry_t builtin_geometries[];
+                                  ^
+runners/bench_runner.c:777:32: error: Subtracting pointers that point to different objects [comparePointers]
+        for (size_t i = 0; i < BENCH_SUITE_COUNT; i++) {
+                               ^
+runners/bench_runner.c:127:27: note: Variable declared here.
+extern struct bench_suite __stop__bench_suites;
+                          ^
+runners/bench_runner.c:777:32: note: Address of variable taken here.
+        for (size_t i = 0; i < BENCH_SUITE_COUNT; i++) {
+                               ^
+runners/bench_runner.c:126:27: note: Variable declared here.
+extern struct bench_suite __start__bench_suites;
+                          ^
+runners/bench_runner.c:777:32: note: Address of variable taken here.
+        for (size_t i = 0; i < BENCH_SUITE_COUNT; i++) {
+                               ^
+runners/bench_runner.c:777:32: note: Subtracting pointers that point to different objects
+        for (size_t i = 0; i < BENCH_SUITE_COUNT; i++) {
+                               ^
+runners/bench_runner.c:822:28: error: Subtracting pointers that point to different objects [comparePointers]
+    for (size_t i = 0; i < BENCH_SUITE_COUNT; i++) {
+                           ^
+runners/bench_runner.c:127:27: note: Variable declared here.
+extern struct bench_suite __stop__bench_suites;
+                          ^
+runners/bench_runner.c:822:28: note: Address of variable taken here.
+    for (size_t i = 0; i < BENCH_SUITE_COUNT; i++) {
+                           ^
+runners/bench_runner.c:126:27: note: Variable declared here.
+extern struct bench_suite __start__bench_suites;
+                          ^
+runners/bench_runner.c:822:28: note: Address of variable taken here.
+    for (size_t i = 0; i < BENCH_SUITE_COUNT; i++) {
+                           ^
+runners/bench_runner.c:822:28: note: Subtracting pointers that point to different objects
+    for (size_t i = 0; i < BENCH_SUITE_COUNT; i++) {
+                           ^
+runners/bench_runner.c:833:32: error: Subtracting pointers that point to different objects [comparePointers]
+        for (size_t i = 0; i < BENCH_SUITE_COUNT; i++) {
+                               ^
+runners/bench_runner.c:127:27: note: Variable declared here.
+extern struct bench_suite __stop__bench_suites;
+                          ^
+runners/bench_runner.c:833:32: note: Address of variable taken here.
+        for (size_t i = 0; i < BENCH_SUITE_COUNT; i++) {
+                               ^
+runners/bench_runner.c:126:27: note: Variable declared here.
+extern struct bench_suite __start__bench_suites;
+                          ^
+runners/bench_runner.c:833:32: note: Address of variable taken here.
+        for (size_t i = 0; i < BENCH_SUITE_COUNT; i++) {
+                               ^
+runners/bench_runner.c:833:32: note: Subtracting pointers that point to different objects
+        for (size_t i = 0; i < BENCH_SUITE_COUNT; i++) {
+                               ^
+runners/bench_runner.c:883:28: error: Subtracting pointers that point to different objects [comparePointers]
+    for (size_t i = 0; i < BENCH_SUITE_COUNT; i++) {
+                           ^
+runners/bench_runner.c:127:27: note: Variable declared here.
+extern struct bench_suite __stop__bench_suites;
+                          ^
+runners/bench_runner.c:883:28: note: Address of variable taken here.
+    for (size_t i = 0; i < BENCH_SUITE_COUNT; i++) {
+                           ^
+runners/bench_runner.c:126:27: note: Variable declared here.
+extern struct bench_suite __start__bench_suites;
+                          ^
+runners/bench_runner.c:883:28: note: Address of variable taken here.
+    for (size_t i = 0; i < BENCH_SUITE_COUNT; i++) {
+                           ^
+runners/bench_runner.c:883:28: note: Subtracting pointers that point to different objects
+    for (size_t i = 0; i < BENCH_SUITE_COUNT; i++) {
+                           ^
+runners/bench_runner.c:895:32: error: Subtracting pointers that point to different objects [comparePointers]
+        for (size_t i = 0; i < BENCH_SUITE_COUNT; i++) {
+                               ^
+runners/bench_runner.c:127:27: note: Variable declared here.
+extern struct bench_suite __stop__bench_suites;
+                          ^
+runners/bench_runner.c:895:32: note: Address of variable taken here.
+        for (size_t i = 0; i < BENCH_SUITE_COUNT; i++) {
+                               ^
+runners/bench_runner.c:126:27: note: Variable declared here.
+extern struct bench_suite __start__bench_suites;
+                          ^
+runners/bench_runner.c:895:32: note: Address of variable taken here.
+        for (size_t i = 0; i < BENCH_SUITE_COUNT; i++) {
+                               ^
+runners/bench_runner.c:895:32: note: Subtracting pointers that point to different objects
+        for (size_t i = 0; i < BENCH_SUITE_COUNT; i++) {
+                               ^
+runners/bench_runner.c:938:28: error: Subtracting pointers that point to different objects [comparePointers]
+    for (size_t i = 0; i < BENCH_SUITE_COUNT; i++) {
+                           ^
+runners/bench_runner.c:127:27: note: Variable declared here.
+extern struct bench_suite __stop__bench_suites;
+                          ^
+runners/bench_runner.c:938:28: note: Address of variable taken here.
+    for (size_t i = 0; i < BENCH_SUITE_COUNT; i++) {
+                           ^
+runners/bench_runner.c:126:27: note: Variable declared here.
+extern struct bench_suite __start__bench_suites;
+                          ^
+runners/bench_runner.c:938:28: note: Address of variable taken here.
+    for (size_t i = 0; i < BENCH_SUITE_COUNT; i++) {
+                           ^
+runners/bench_runner.c:938:28: note: Subtracting pointers that point to different objects
+    for (size_t i = 0; i < BENCH_SUITE_COUNT; i++) {
+                           ^
+runners/bench_runner.c:948:32: error: Subtracting pointers that point to different objects [comparePointers]
+        for (size_t i = 0; i < BENCH_SUITE_COUNT; i++) {
+                               ^
+runners/bench_runner.c:127:27: note: Variable declared here.
+extern struct bench_suite __stop__bench_suites;
+                          ^
+runners/bench_runner.c:948:32: note: Address of variable taken here.
+        for (size_t i = 0; i < BENCH_SUITE_COUNT; i++) {
+                               ^
+runners/bench_runner.c:126:27: note: Variable declared here.
+extern struct bench_suite __start__bench_suites;
+                          ^
+runners/bench_runner.c:948:32: note: Address of variable taken here.
+        for (size_t i = 0; i < BENCH_SUITE_COUNT; i++) {
+                               ^
+runners/bench_runner.c:948:32: note: Subtracting pointers that point to different objects
+        for (size_t i = 0; i < BENCH_SUITE_COUNT; i++) {
+                               ^
+runners/bench_runner.c:980:28: error: Subtracting pointers that point to different objects [comparePointers]
+    for (size_t i = 0; i < BENCH_SUITE_COUNT; i++) {
+                           ^
+runners/bench_runner.c:127:27: note: Variable declared here.
+extern struct bench_suite __stop__bench_suites;
+                          ^
+runners/bench_runner.c:980:28: note: Address of variable taken here.
+    for (size_t i = 0; i < BENCH_SUITE_COUNT; i++) {
+                           ^
+runners/bench_runner.c:126:27: note: Variable declared here.
+extern struct bench_suite __start__bench_suites;
+                          ^
+runners/bench_runner.c:980:28: note: Address of variable taken here.
+    for (size_t i = 0; i < BENCH_SUITE_COUNT; i++) {
+                           ^
+runners/bench_runner.c:980:28: note: Subtracting pointers that point to different objects
+    for (size_t i = 0; i < BENCH_SUITE_COUNT; i++) {
+                           ^
+runners/bench_runner.c:992:32: error: Subtracting pointers that point to different objects [comparePointers]
+        for (size_t i = 0; i < BENCH_SUITE_COUNT; i++) {
+                               ^
+runners/bench_runner.c:127:27: note: Variable declared here.
+extern struct bench_suite __stop__bench_suites;
+                          ^
+runners/bench_runner.c:992:32: note: Address of variable taken here.
+        for (size_t i = 0; i < BENCH_SUITE_COUNT; i++) {
+                               ^
+runners/bench_runner.c:126:27: note: Variable declared here.
+extern struct bench_suite __start__bench_suites;
+                          ^
+runners/bench_runner.c:992:32: note: Address of variable taken here.
+        for (size_t i = 0; i < BENCH_SUITE_COUNT; i++) {
+                               ^
+runners/bench_runner.c:992:32: note: Subtracting pointers that point to different objects
+        for (size_t i = 0; i < BENCH_SUITE_COUNT; i++) {
+                               ^
+runners/bench_runner.c:1110:32: error: Subtracting pointers that point to different objects [comparePointers]
+        for (size_t i = 0; i < BENCH_SUITE_COUNT; i++) {
+                               ^
+runners/bench_runner.c:127:27: note: Variable declared here.
+extern struct bench_suite __stop__bench_suites;
+                          ^
+runners/bench_runner.c:1110:32: note: Address of variable taken here.
+        for (size_t i = 0; i < BENCH_SUITE_COUNT; i++) {
+                               ^
+runners/bench_runner.c:126:27: note: Variable declared here.
+extern struct bench_suite __start__bench_suites;
+                          ^
+runners/bench_runner.c:1110:32: note: Address of variable taken here.
+        for (size_t i = 0; i < BENCH_SUITE_COUNT; i++) {
+                               ^
+runners/bench_runner.c:1110:32: note: Subtracting pointers that point to different objects
+        for (size_t i = 0; i < BENCH_SUITE_COUNT; i++) {
+                               ^
+runners/bench_runner.c:1156:32: error: Subtracting pointers that point to different objects [comparePointers]
+        for (size_t i = 0; i < BENCH_SUITE_COUNT; i++) {
+                               ^
+runners/bench_runner.c:127:27: note: Variable declared here.
+extern struct bench_suite __stop__bench_suites;
+                          ^
+runners/bench_runner.c:1156:32: note: Address of variable taken here.
+        for (size_t i = 0; i < BENCH_SUITE_COUNT; i++) {
+                               ^
+runners/bench_runner.c:126:27: note: Variable declared here.
+extern struct bench_suite __start__bench_suites;
+                          ^
+runners/bench_runner.c:1156:32: note: Address of variable taken here.
+        for (size_t i = 0; i < BENCH_SUITE_COUNT; i++) {
+                               ^
+runners/bench_runner.c:1156:32: note: Subtracting pointers that point to different objects
+        for (size_t i = 0; i < BENCH_SUITE_COUNT; i++) {
+                               ^
+runners/bench_runner.c:1372:32: error: Subtracting pointers that point to different objects [comparePointers]
+        for (size_t i = 0; i < BENCH_SUITE_COUNT; i++) {
+                               ^
+runners/bench_runner.c:127:27: note: Variable declared here.
+extern struct bench_suite __stop__bench_suites;
+                          ^
+runners/bench_runner.c:1372:32: note: Address of variable taken here.
+        for (size_t i = 0; i < BENCH_SUITE_COUNT; i++) {
+                               ^
+runners/bench_runner.c:126:27: note: Variable declared here.
+extern struct bench_suite __start__bench_suites;
+                          ^
+runners/bench_runner.c:1372:32: note: Address of variable taken here.
+        for (size_t i = 0; i < BENCH_SUITE_COUNT; i++) {
+                               ^
+runners/bench_runner.c:1372:32: note: Subtracting pointers that point to different objects
+        for (size_t i = 0; i < BENCH_SUITE_COUNT; i++) {
+                               ^
+runners/test_runner.c:1714:5: error: Address of local auto-variable assigned to a function parameter. [autoVariables]
+    bdcfg->powerloss_data = &state;
+    ^
+runners/test_runner.c:1745:9: error: Address of local auto-variable assigned to a function parameter. [autoVariables]
+        cfg->context = &state.branches[i];
+        ^
+runners/test_runner.c:50:15: warning: The address of local variable 'values' might be accessed at non-zero index. [objectIndex]
+    return &p_[(count_-1)*size];
+              ^
+runners/test_runner.c:1075:25: note: Address of variable taken here.
+                (void**)&defines->defines[i].values,
+                        ^
+runners/test_runner.c:1075:17: note: Calling function 'mappend', 1st argument '(void**)&defines->defines[i].values' value is lifetime=values
+                (void**)&defines->defines[i].values,
+                ^
+runners/test_runner.c:38:16: note: Assuming condition is false
+    if (count_ > capacity_) {
+               ^
+runners/test_runner.c:50:15: note: The address of local variable 'values' might be accessed at non-zero index.
+    return &p_[(count_-1)*size];
+              ^
+runners/test_runner.c:50:15: warning: The address of local variable 'test_overrides' might be accessed at non-zero index. [objectIndex]
+    return &p_[(count_-1)*size];
+              ^
+runners/test_runner.c:2129:33: note: Address of variable taken here.
+                        (void**)&test_overrides,
+                                ^
+runners/test_runner.c:2129:25: note: Calling function 'mappend', 1st argument '(void**)&test_overrides' value is lifetime=test_overrides
+                        (void**)&test_overrides,
+                        ^
+runners/test_runner.c:38:16: note: Assuming condition is false
+    if (count_ > capacity_) {
+               ^
+runners/test_runner.c:50:15: note: The address of local variable 'test_overrides' might be accessed at non-zero index.
+    return &p_[(count_-1)*size];
+              ^
+runners/test_runner.c:50:15: warning: The address of local variable 'test_geometries' might be accessed at non-zero index. [objectIndex]
+    return &p_[(count_-1)*size];
+              ^
+runners/test_runner.c:2266:37: note: Address of variable taken here.
+                            (void**)&test_geometries,
+                                    ^
+runners/test_runner.c:2266:29: note: Calling function 'mappend', 1st argument '(void**)&test_geometries' value is lifetime=test_geometries
+                            (void**)&test_geometries,
+                            ^
+runners/test_runner.c:38:16: note: Assuming condition is false
+    if (count_ > capacity_) {
+               ^
+runners/test_runner.c:50:15: note: The address of local variable 'test_geometries' might be accessed at non-zero index.
+    return &p_[(count_-1)*size];
+              ^
+runners/test_runner.c:50:15: warning: The address of local variable 'test_powerlosses' might be accessed at non-zero index. [objectIndex]
+    return &p_[(count_-1)*size];
+              ^
+runners/test_runner.c:2411:37: note: Address of variable taken here.
+                            (void**)&test_powerlosses,
+                                    ^
+runners/test_runner.c:2411:29: note: Calling function 'mappend', 1st argument '(void**)&test_powerlosses' value is lifetime=test_powerlosses
+                            (void**)&test_powerlosses,
+                            ^
+runners/test_runner.c:38:16: note: Assuming condition is false
+    if (count_ > capacity_) {
+               ^
+runners/test_runner.c:50:15: note: The address of local variable 'test_powerlosses' might be accessed at non-zero index.
+    return &p_[(count_-1)*size];
+              ^
+runners/test_runner.c:269:5: portability: %zd in format string (no. 2) requires 'ssize_t' but the argument type is 'size_t {aka unsigned long}'. [invalidPrintfArgType_sint]
+    fprintf(stderr, "error: undefined define %s (%zd)\n",
+    ^
+runners/test_runner.c:318:9: error: Common realloc mistake: 'test_define_cache' nulled but not freed upon failure [memleakOnRealloc]
+        test_define_cache = realloc(test_define_cache, ncount*sizeof(intmax_t));
+        ^
+runners/test_runner.c:319:9: error: Common realloc mistake: 'test_define_cache_mask' nulled but not freed upon failure [memleakOnRealloc]
+        test_define_cache_mask = realloc(test_define_cache_mask,
+        ^
+runners/test_runner.c:353:13: error: Common realloc mistake: 'test_override_defines' nulled but not freed upon failure [memleakOnRealloc]
+            test_override_defines = realloc(
+            ^
+runners/test_runner.c:2706:21: error: Common realloc mistake: 'defines' nulled but not freed upon failure [memleakOnRealloc]
+                    defines = realloc(defines,
+                    ^
+runners/test_runner.c:268:5: style:inconclusive: Statements following return, break, continue, goto or throw will never be executed. [unreachableCode]
+    const char *name = test_define_name(define);
+    ^
+runners/test_runner.c:1246:34: style: Local variable 'builtin_geometries' shadows outer variable [shadowVariable]
+    extern const test_geometry_t builtin_geometries[];
+                                 ^
+runners/test_runner.c:1140:30: note: Shadowed declaration
+extern const test_geometry_t builtin_geometries[];
+                             ^
+runners/test_runner.c:1246:34: note: Shadow variable
+    extern const test_geometry_t builtin_geometries[];
+                                 ^
+runners/test_runner.c:804:32: error: Subtracting pointers that point to different objects [comparePointers]
+        for (size_t i = 0; i < TEST_SUITE_COUNT; i++) {
+                               ^
+runners/test_runner.c:140:26: note: Variable declared here.
+extern struct test_suite __stop__test_suites;
+                         ^
+runners/test_runner.c:804:32: note: Address of variable taken here.
+        for (size_t i = 0; i < TEST_SUITE_COUNT; i++) {
+                               ^
+runners/test_runner.c:139:26: note: Variable declared here.
+extern struct test_suite __start__test_suites;
+                         ^
+runners/test_runner.c:804:32: note: Address of variable taken here.
+        for (size_t i = 0; i < TEST_SUITE_COUNT; i++) {
+                               ^
+runners/test_runner.c:804:32: note: Subtracting pointers that point to different objects
+        for (size_t i = 0; i < TEST_SUITE_COUNT; i++) {
+                               ^
+runners/test_runner.c:851:28: error: Subtracting pointers that point to different objects [comparePointers]
+    for (size_t i = 0; i < TEST_SUITE_COUNT; i++) {
+                           ^
+runners/test_runner.c:140:26: note: Variable declared here.
+extern struct test_suite __stop__test_suites;
+                         ^
+runners/test_runner.c:851:28: note: Address of variable taken here.
+    for (size_t i = 0; i < TEST_SUITE_COUNT; i++) {
+                           ^
+runners/test_runner.c:139:26: note: Variable declared here.
+extern struct test_suite __start__test_suites;
+                         ^
+runners/test_runner.c:851:28: note: Address of variable taken here.
+    for (size_t i = 0; i < TEST_SUITE_COUNT; i++) {
+                           ^
+runners/test_runner.c:851:28: note: Subtracting pointers that point to different objects
+    for (size_t i = 0; i < TEST_SUITE_COUNT; i++) {
+                           ^
+runners/test_runner.c:862:32: error: Subtracting pointers that point to different objects [comparePointers]
+        for (size_t i = 0; i < TEST_SUITE_COUNT; i++) {
+                               ^
+runners/test_runner.c:140:26: note: Variable declared here.
+extern struct test_suite __stop__test_suites;
+                         ^
+runners/test_runner.c:862:32: note: Address of variable taken here.
+        for (size_t i = 0; i < TEST_SUITE_COUNT; i++) {
+                               ^
+runners/test_runner.c:139:26: note: Variable declared here.
+extern struct test_suite __start__test_suites;
+                         ^
+runners/test_runner.c:862:32: note: Address of variable taken here.
+        for (size_t i = 0; i < TEST_SUITE_COUNT; i++) {
+                               ^
+runners/test_runner.c:862:32: note: Subtracting pointers that point to different objects
+        for (size_t i = 0; i < TEST_SUITE_COUNT; i++) {
+                               ^
+runners/test_runner.c:914:28: error: Subtracting pointers that point to different objects [comparePointers]
+    for (size_t i = 0; i < TEST_SUITE_COUNT; i++) {
+                           ^
+runners/test_runner.c:140:26: note: Variable declared here.
+extern struct test_suite __stop__test_suites;
+                         ^
+runners/test_runner.c:914:28: note: Address of variable taken here.
+    for (size_t i = 0; i < TEST_SUITE_COUNT; i++) {
+                           ^
+runners/test_runner.c:139:26: note: Variable declared here.
+extern struct test_suite __start__test_suites;
+                         ^
+runners/test_runner.c:914:28: note: Address of variable taken here.
+    for (size_t i = 0; i < TEST_SUITE_COUNT; i++) {
+                           ^
+runners/test_runner.c:914:28: note: Subtracting pointers that point to different objects
+    for (size_t i = 0; i < TEST_SUITE_COUNT; i++) {
+                           ^
+runners/test_runner.c:926:32: error: Subtracting pointers that point to different objects [comparePointers]
+        for (size_t i = 0; i < TEST_SUITE_COUNT; i++) {
+                               ^
+runners/test_runner.c:140:26: note: Variable declared here.
+extern struct test_suite __stop__test_suites;
+                         ^
+runners/test_runner.c:926:32: note: Address of variable taken here.
+        for (size_t i = 0; i < TEST_SUITE_COUNT; i++) {
+                               ^
+runners/test_runner.c:139:26: note: Variable declared here.
+extern struct test_suite __start__test_suites;
+                         ^
+runners/test_runner.c:926:32: note: Address of variable taken here.
+        for (size_t i = 0; i < TEST_SUITE_COUNT; i++) {
+                               ^
+runners/test_runner.c:926:32: note: Subtracting pointers that point to different objects
+        for (size_t i = 0; i < TEST_SUITE_COUNT; i++) {
+                               ^
+runners/test_runner.c:971:28: error: Subtracting pointers that point to different objects [comparePointers]
+    for (size_t i = 0; i < TEST_SUITE_COUNT; i++) {
+                           ^
+runners/test_runner.c:140:26: note: Variable declared here.
+extern struct test_suite __stop__test_suites;
+                         ^
+runners/test_runner.c:971:28: note: Address of variable taken here.
+    for (size_t i = 0; i < TEST_SUITE_COUNT; i++) {
+                           ^
+runners/test_runner.c:139:26: note: Variable declared here.
+extern struct test_suite __start__test_suites;
+                         ^
+runners/test_runner.c:971:28: note: Address of variable taken here.
+    for (size_t i = 0; i < TEST_SUITE_COUNT; i++) {
+                           ^
+runners/test_runner.c:971:28: note: Subtracting pointers that point to different objects
+    for (size_t i = 0; i < TEST_SUITE_COUNT; i++) {
+                           ^
+runners/test_runner.c:981:32: error: Subtracting pointers that point to different objects [comparePointers]
+        for (size_t i = 0; i < TEST_SUITE_COUNT; i++) {
+                               ^
+runners/test_runner.c:140:26: note: Variable declared here.
+extern struct test_suite __stop__test_suites;
+                         ^
+runners/test_runner.c:981:32: note: Address of variable taken here.
+        for (size_t i = 0; i < TEST_SUITE_COUNT; i++) {
+                               ^
+runners/test_runner.c:139:26: note: Variable declared here.
+extern struct test_suite __start__test_suites;
+                         ^
+runners/test_runner.c:981:32: note: Address of variable taken here.
+        for (size_t i = 0; i < TEST_SUITE_COUNT; i++) {
+                               ^
+runners/test_runner.c:981:32: note: Subtracting pointers that point to different objects
+        for (size_t i = 0; i < TEST_SUITE_COUNT; i++) {
+                               ^
+runners/test_runner.c:1013:28: error: Subtracting pointers that point to different objects [comparePointers]
+    for (size_t i = 0; i < TEST_SUITE_COUNT; i++) {
+                           ^
+runners/test_runner.c:140:26: note: Variable declared here.
+extern struct test_suite __stop__test_suites;
+                         ^
+runners/test_runner.c:1013:28: note: Address of variable taken here.
+    for (size_t i = 0; i < TEST_SUITE_COUNT; i++) {
+                           ^
+runners/test_runner.c:139:26: note: Variable declared here.
+extern struct test_suite __start__test_suites;
+                         ^
+runners/test_runner.c:1013:28: note: Address of variable taken here.
+    for (size_t i = 0; i < TEST_SUITE_COUNT; i++) {
+                           ^
+runners/test_runner.c:1013:28: note: Subtracting pointers that point to different objects
+    for (size_t i = 0; i < TEST_SUITE_COUNT; i++) {
+                           ^
+runners/test_runner.c:1025:32: error: Subtracting pointers that point to different objects [comparePointers]
+        for (size_t i = 0; i < TEST_SUITE_COUNT; i++) {
+                               ^
+runners/test_runner.c:140:26: note: Variable declared here.
+extern struct test_suite __stop__test_suites;
+                         ^
+runners/test_runner.c:1025:32: note: Address of variable taken here.
+        for (size_t i = 0; i < TEST_SUITE_COUNT; i++) {
+                               ^
+runners/test_runner.c:139:26: note: Variable declared here.
+extern struct test_suite __start__test_suites;
+                         ^
+runners/test_runner.c:1025:32: note: Address of variable taken here.
+        for (size_t i = 0; i < TEST_SUITE_COUNT; i++) {
+                               ^
+runners/test_runner.c:1025:32: note: Subtracting pointers that point to different objects
+        for (size_t i = 0; i < TEST_SUITE_COUNT; i++) {
+                               ^
+runners/test_runner.c:1147:32: error: Subtracting pointers that point to different objects [comparePointers]
+        for (size_t i = 0; i < TEST_SUITE_COUNT; i++) {
+                               ^
+runners/test_runner.c:140:26: note: Variable declared here.
+extern struct test_suite __stop__test_suites;
+                         ^
+runners/test_runner.c:1147:32: note: Address of variable taken here.
+        for (size_t i = 0; i < TEST_SUITE_COUNT; i++) {
+                               ^
+runners/test_runner.c:139:26: note: Variable declared here.
+extern struct test_suite __start__test_suites;
+                         ^
+runners/test_runner.c:1147:32: note: Address of variable taken here.
+        for (size_t i = 0; i < TEST_SUITE_COUNT; i++) {
+                               ^
+runners/test_runner.c:1147:32: note: Subtracting pointers that point to different objects
+        for (size_t i = 0; i < TEST_SUITE_COUNT; i++) {
+                               ^
+runners/test_runner.c:1195:32: error: Subtracting pointers that point to different objects [comparePointers]
+        for (size_t i = 0; i < TEST_SUITE_COUNT; i++) {
+                               ^
+runners/test_runner.c:140:26: note: Variable declared here.
+extern struct test_suite __stop__test_suites;
+                         ^
+runners/test_runner.c:1195:32: note: Address of variable taken here.
+        for (size_t i = 0; i < TEST_SUITE_COUNT; i++) {
+                               ^
+runners/test_runner.c:139:26: note: Variable declared here.
+extern struct test_suite __start__test_suites;
+                         ^
+runners/test_runner.c:1195:32: note: Address of variable taken here.
+        for (size_t i = 0; i < TEST_SUITE_COUNT; i++) {
+                               ^
+runners/test_runner.c:1195:32: note: Subtracting pointers that point to different objects
+        for (size_t i = 0; i < TEST_SUITE_COUNT; i++) {
+                               ^
+runners/test_runner.c:1913:32: error: Subtracting pointers that point to different objects [comparePointers]
+        for (size_t i = 0; i < TEST_SUITE_COUNT; i++) {
+                               ^
+runners/test_runner.c:140:26: note: Variable declared here.
+extern struct test_suite __stop__test_suites;
+                         ^
+runners/test_runner.c:1913:32: note: Address of variable taken here.
+        for (size_t i = 0; i < TEST_SUITE_COUNT; i++) {
+                               ^
+runners/test_runner.c:139:26: note: Variable declared here.
+extern struct test_suite __start__test_suites;
+                         ^
+runners/test_runner.c:1913:32: note: Address of variable taken here.
+        for (size_t i = 0; i < TEST_SUITE_COUNT; i++) {
+                               ^
+runners/test_runner.c:1913:32: note: Subtracting pointers that point to different objects
+        for (size_t i = 0; i < TEST_SUITE_COUNT; i++) {
+                               ^
+lfs.c:4628:5: error: Null pointer dereference: pdir [ctunullpointer]
+    pdir->tail[0] = 0;
+    ^
+lfs.c:2388:41: note: Calling function lfs_dir_relocatingcommit, 6th argument is null
+        state = lfs_dir_relocatingcommit(lfs, &pdir, lpair, LFS_MKATTRS(
+                                        ^
+lfs.c:2192:19: note: Calling function lfs_fs_pred, 3rd argument is null
+        int err = lfs_fs_pred(lfs, dir->pair, pdir);
+                  ^
+lfs.c:4628:5: note: Dereferencing argument pdir that is null
+    pdir->tail[0] = 0;
+    ^
+runners/bench_runner.c:228:0: style: The function 'bench_define' is never used. [unusedFunction]
+
+^
+runners/bench_runner.c:547:0: style: The function 'bench_prng' is never used. [unusedFunction]
+
+^
+runners/bench_runner.c:577:0: style: The function 'bench_start' is never used. [unusedFunction]
+
+^
+runners/bench_runner.c:591:0: style: The function 'bench_stop' is never used. [unusedFunction]
+
+^
+runners/bench_runner.c:449:0: style: The function 'bench_trace' is never used. [unusedFunction]
+
+^
+lfs.c:6076:0: style: The function 'lfs_dir_close' is never used. [unusedFunction]
+
+^
+lfs.c:6061:0: style: The function 'lfs_dir_open' is never used. [unusedFunction]
+
+^
+lfs.c:6090:0: style: The function 'lfs_dir_read' is never used. [unusedFunction]
+
+^
+lfs.c:6134:0: style: The function 'lfs_dir_rewind' is never used. [unusedFunction]
+
+^
+lfs.c:6105:0: style: The function 'lfs_dir_seek' is never used. [unusedFunction]
+
+^
+lfs.c:6120:0: style: The function 'lfs_dir_tell' is never used. [unusedFunction]
+
+^
+bd/lfs_emubd.c:505:0: style: The function 'lfs_emubd_bdcrc' is never used. [unusedFunction]
+
+^
+bd/lfs_emubd.c:496:0: style: The function 'lfs_emubd_crc' is never used. [unusedFunction]
+
+^
+bd/lfs_emubd.c:187:0: style: The function 'lfs_emubd_create' is never used. [unusedFunction]
+
+^
+bd/lfs_emubd.c:612:0: style: The function 'lfs_emubd_powercycles' is never used. [unusedFunction]
+
+^
+bd/lfs_emubd.c:562:0: style: The function 'lfs_emubd_seterased' is never used. [unusedFunction]
+
+^
+bd/lfs_emubd.c:554:0: style: The function 'lfs_emubd_setproged' is never used. [unusedFunction]
+
+^
+bd/lfs_emubd.c:546:0: style: The function 'lfs_emubd_setreaded' is never used. [unusedFunction]
+
+^
+bd/lfs_emubd.c:591:0: style: The function 'lfs_emubd_setwear' is never used. [unusedFunction]
+
+^
+bd/lfs_emubd.c:570:0: style: The function 'lfs_emubd_wear' is never used. [unusedFunction]
+
+^
+lfs.c:5898:0: style: The function 'lfs_file_close' is never used. [unusedFunction]
+
+^
+lfs.c:5861:0: style: The function 'lfs_file_open' is never used. [unusedFunction]
+
+^
+lfs.c:5878:0: style: The function 'lfs_file_opencfg' is never used. [unusedFunction]
+
+^
+lfs.c:5930:0: style: The function 'lfs_file_read' is never used. [unusedFunction]
+
+^
+lfs.c:6016:0: style: The function 'lfs_file_rewind' is never used. [unusedFunction]
+
+^
+lfs.c:5966:0: style: The function 'lfs_file_seek' is never used. [unusedFunction]
+
+^
+lfs.c:6030:0: style: The function 'lfs_file_size' is never used. [unusedFunction]
+
+^
+lfs.c:5914:0: style: The function 'lfs_file_sync' is never used. [unusedFunction]
+
+^
+lfs.c:6001:0: style: The function 'lfs_file_tell' is never used. [unusedFunction]
+
+^
+lfs.c:5984:0: style: The function 'lfs_file_truncate' is never used. [unusedFunction]
+
+^
+lfs.c:5948:0: style: The function 'lfs_file_write' is never used. [unusedFunction]
+
+^
+bd/lfs_filebd.c:18:0: style: The function 'lfs_filebd_create' is never used. [unusedFunction]
+
+^
+bd/lfs_filebd.c:48:0: style: The function 'lfs_filebd_destroy' is never used. [unusedFunction]
+
+^
+bd/lfs_filebd.c:130:0: style: The function 'lfs_filebd_erase' is never used. [unusedFunction]
+
+^
+bd/lfs_filebd.c:97:0: style: The function 'lfs_filebd_prog' is never used. [unusedFunction]
+
+^
+bd/lfs_filebd.c:61:0: style: The function 'lfs_filebd_read' is never used. [unusedFunction]
+
+^
+bd/lfs_filebd.c:144:0: style: The function 'lfs_filebd_sync' is never used. [unusedFunction]
+
+^
+lfs.c:5691:0: style: The function 'lfs_format' is never used. [unusedFunction]
+
+^
+lfs.c:6192:0: style: The function 'lfs_fs_mkconsistent' is never used. [unusedFunction]
+
+^
+lfs.c:6162:0: style: The function 'lfs_fs_size' is never used. [unusedFunction]
+
+^
+lfs.c:6148:0: style: The function 'lfs_fs_stat' is never used. [unusedFunction]
+
+^
+lfs.c:6176:0: style: The function 'lfs_fs_traverse' is never used. [unusedFunction]
+
+^
+lfs.c:5810:0: style: The function 'lfs_getattr' is never used. [unusedFunction]
+
+^
+lfs.c:6208:0: style: The function 'lfs_migrate' is never used. [unusedFunction]
+
+^
+lfs.c:6046:0: style: The function 'lfs_mkdir' is never used. [unusedFunction]
+
+^
+lfs.c:5721:0: style: The function 'lfs_mount' is never used. [unusedFunction]
+
+^
+bd/lfs_rambd.c:43:0: style: The function 'lfs_rambd_create' is never used. [unusedFunction]
+
+^
+bd/lfs_rambd.c:58:0: style: The function 'lfs_rambd_destroy' is never used. [unusedFunction]
+
+^
+bd/lfs_rambd.c:109:0: style: The function 'lfs_rambd_erase' is never used. [unusedFunction]
+
+^
+bd/lfs_rambd.c:89:0: style: The function 'lfs_rambd_prog' is never used. [unusedFunction]
+
+^
+bd/lfs_rambd.c:69:0: style: The function 'lfs_rambd_read' is never used. [unusedFunction]
+
+^
+bd/lfs_rambd.c:123:0: style: The function 'lfs_rambd_sync' is never used. [unusedFunction]
+
+^
+lfs.c:5765:0: style: The function 'lfs_remove' is never used. [unusedFunction]
+
+^
+lfs.c:5845:0: style: The function 'lfs_removeattr' is never used. [unusedFunction]
+
+^
+lfs.c:5781:0: style: The function 'lfs_rename' is never used. [unusedFunction]
+
+^
+lfs.c:5827:0: style: The function 'lfs_setattr' is never used. [unusedFunction]
+
+^
+lfs.c:5796:0: style: The function 'lfs_stat' is never used. [unusedFunction]
+
+^
+lfs.c:5750:0: style: The function 'lfs_unmount' is never used. [unusedFunction]
+
+^
+runners/test_runner.c:241:0: style: The function 'test_define' is never used. [unusedFunction]
+
+^
+runners/test_runner.c:563:0: style: The function 'test_prng' is never used. [unusedFunction]
+
+^
+runners/test_runner.c:465:0: style: The function 'test_trace' is never used. [unusedFunction]
+
+^
+nofile:0:0: information: Cppcheck cannot find all the include files (use --check-config for details) [missingInclude]
+
